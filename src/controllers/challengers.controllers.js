@@ -1,5 +1,5 @@
 import Challenger from "../models/challengers.models.js";
-
+//get
 export const getChallengers = async (req, res) => {
     try {
         const challengers = await Challenger.find();
