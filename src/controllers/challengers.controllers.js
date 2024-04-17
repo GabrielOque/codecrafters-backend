@@ -20,3 +20,13 @@ export const createChallenger = async (req, res) => {
         res.send({ message: "Ocurrio un mensaje" });
     }
 };
+
+export const getChallengerById = async (req, res) => { 
+    try {
+        const challenger = await Challenger.findById(req.params.id);
+        return res.send(challenger);
+    } catch (error) {
+        console.log(error);
+        res.send({ message: "Ocurrio un mensaje" });
+    }
+}
